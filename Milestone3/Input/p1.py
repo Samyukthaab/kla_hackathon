@@ -33,8 +33,30 @@ rheight=10
 dheight=5
 
 ans=[]
-
+ans.append([(x,y),(llcx,llcy)])
 c=1
+
+rightx=llcx+length
+rightx+=dwidth
+while(rightx<radius):
+    x+=1
+    c+=1
+    if ((rightx*rightx)+(llcy*llcy))<=(radius*radius):
+        ans.append([(x,y),(rightx,llcy)])
+    if c%2==0:
+        rightx+=(rwidth+dwidth)
+    rightx+=length
+
+x=0
+rightx=llcx-length
+while(rightx>=(-radius) or (rightx+length)>(-radius)):
+    x-=1
+    if ((rightx*rightx)+(llcy*llcy))<=(radius*radius):
+        ans.append([(x,y),(rightx,llcy)])
+    rightx-=length
+'''
+
+'''
 while(llcy<radius):
     ans.append([(x,y),(llcx,llcy)])
     rightx=llcx+length
@@ -49,6 +71,7 @@ while(llcy<radius):
         rightx+=length
     break
 
+    '''
 '''
     x=0
     rightx=llcx-length
