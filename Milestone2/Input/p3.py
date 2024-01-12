@@ -44,7 +44,7 @@ while(llcy<radius):
             ans.append([(x,y),(rightx,llcy)])
         rightx-=length
     
-    llcy+=length
+    llcy+=height
     y+=1
     x=0
 
@@ -52,7 +52,7 @@ llcx=ref[0]-length//2
 llcy=ref[1]-height//2
 x=0
 y=0
-while((llcy>=(-radius)) or (llcy+length>(-radius))):
+while((llcy>=(-radius)) or (llcy+height>(-radius))):
     ans.append([(x,y),(llcx,llcy)])
     rightx=llcx+length
     while(rightx<radius):
@@ -61,10 +61,10 @@ while((llcy>=(-radius)) or (llcy+length>(-radius))):
             ans.append([(x,y),(rightx,llcy)])
         rightx+=length
     
-    if (llcy+length>(-radius)):
+    if (llcy+height>(-radius)):
         while(rightx<radius):
             x+=1
-            l=llcy+length
+            l=llcy+height
             if ((rightx*rightx)+(l*l))<=(radius*radius):
                 ans.append([(x,y),(rightx,llcy)])
             rightx+=length
@@ -78,7 +78,7 @@ while((llcy>=(-radius)) or (llcy+length>(-radius))):
         rightx-=length
 
     
-    llcy-=length
+    llcy-=height
     y-=1
     x=0
 
