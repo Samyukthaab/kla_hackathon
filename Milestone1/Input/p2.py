@@ -1,6 +1,6 @@
 import math
 
-with open('Testcase1.txt') as f:
+with open('Testcase2.txt') as f:
     lines = f.readlines()
 d = lines[0]
 diameter = eval(d[14:])
@@ -10,10 +10,10 @@ points = eval(p[15:])
 #print(points)
 a=lines[2]
 angle = eval(a[6:])
-#print(angle)
+print(angle)
 
 radian = angle * math.pi / 180
-print(radian)
+#radian = angle
 
 #diameter line (x- axis)
 radius = diameter/2
@@ -37,8 +37,6 @@ if (x1-int(x1))==0.0:
 c.append((x1,y1))
 
 gap = diameter/(points-1)
-
-#gap=round(gap,1)
 print('g',gap)
 
 i=1
@@ -63,7 +61,7 @@ c.append((x2,y2))
 print(len(c))
 print(c)
 
-file1 = open('output1.txt','w')
+file1 = open('output2.txt','w')
 for i in c:
     file1.write('(')
     file1.write(','.join(str(s) for s in i))
