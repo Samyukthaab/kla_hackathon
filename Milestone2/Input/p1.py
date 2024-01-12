@@ -25,6 +25,7 @@ x=0
 y=0
 ans=[]
 
+
 #ans.append([(x,y),(llcx,llcy)])
 
 while(llcy<radius):
@@ -98,4 +99,6 @@ for i in ans:
     file1.write(','.join(str(s) for s in i[1]))
     file1.write(')\n')
 file1.close()
+
+
 
